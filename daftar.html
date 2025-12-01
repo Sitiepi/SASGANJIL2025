@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>daftar siswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container"> 
+       <h1>Biodata</h1>
+       <a href="tambah.html" class="button"> Tambah Siswa</a>
+       <table>
+         <thead>
+           <tr>
+             <th>No</th>
+             <th>Nama lengkap</th>
+             <th>Tanggal lahir</th>
+             <th>Agama</th>
+             <th>No telpon</th>
+             <th>Hobi</th>
+             <th>Cita-cita</th>
+             <th>Alamat</th>
+             <th>Aksi</th>
+              
+           </tr>
+         </thead>
+         <tbody id="tabelData"></tbody>
+       </table>
+  </div>
+  <script type="module">
+    import {tampilkanBiodataSiswa} from './main.js'
+    
+    tampilkanBiodataSiswa()
+  </script>
+
+</body>
+</html>
