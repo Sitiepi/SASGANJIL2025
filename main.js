@@ -50,8 +50,8 @@ export async function tampilkanBiodataSiswa() {
     kolomNo.textContent = data.no
     
     //buat element kolom untuk nama
-    const kolomNamalengkap = document.createElement("td")
-    kolomNamalengkap.textContent = data.namalengkap
+    const kolomNamaLengkap = document.createElement("td")
+    kolomNamaLengkap.textContent = data.namalengkap
     
     // buat kolom kelas
     const kolomJenisKelamin = document.createElement("td")
@@ -63,17 +63,17 @@ export async function tampilkanBiodataSiswa() {
     const kolomAgama = document.createElement("td")
     kolomAgama.textContent = data.agama
     
-    const kolomNotelpon = document.createElement("td")
-    kolomNotelpon.textContent = data.notelpon
+    const kolomNoTelpon = document.createElement("td")
+    kolomNoTelpon.textContent = data.notelpon
     
     const kolomHobi = document.createElement("td")
     kolomHobi.textContent = data.hobi
     
-    const kolomCitacita = document.createElement("td")
-    kolomCitacita.textContent = data.citacita
+    const kolomCitaCita = document.createElement("td")
+    kolomCitaCita.textContent = data.citacita
     
-    const kolomAlamat = document.createEvent("td")
-    kolomAlamat.textContent = data.alam
+    const kolomAlamat = document.createElement("td")
+    kolomAlamat.textContent = data.alamat
     // buat element kolom untuk Aksi
     const kolomAksi = document.createElement("td")
     
@@ -97,13 +97,13 @@ export async function tampilkanBiodataSiswa() {
     
     //tambah kolom kedalam baris
     baris.appendChild(kolomNo)
-    baris.appendChild(kolomNamalengkap)
-    baris.appendChild(kolomJeniskelamin)
-    baris.appendChild(kolomTanggallahir)
+    baris.appendChild(kolomNamaLengkap)
+    baris.appendChild(kolomTanggalLahir)
+    baris.appendChild(kolomJenisKelamin)
     baris.appendChild(kolomAgama)
-    baris.appendChild(kolomNotelpon)
+    baris.appendChild(kolomNoTelpon)
     baris.appendChild(kolomHobi)
-    baris.appendChild(kolomCitacita)
+    baris.appendChild(kolomCitaCita)
     baris.appendChild(kolomAlamat)
     baris.appendChild(kolomAksi)
     
@@ -116,22 +116,22 @@ export async function tampilkanBiodataSiswa() {
 //fungsi untuk menambahkan data siswa
 export async function tambahBiodataSiswa() {
   //ambil nilai dari form
-  const no = document.getElementById('no').Value;
-  const namalengkap = document.getElementById('namalengkap').Value;
-  const jeniskelamin = document.getElementById('jeniskelamin').Value;
-  const tanggallahir = document.getElementById('tanggallahir').Value;
-  const agama = document.getElementById('agama').Value
-  const notelpon = document.getElementById('notelpon').Value;
-  const hobi = document.getElementById('hobi').Value
-  const citacita = document.getElementById('citacita').Value;
-  const alamat = document.getElementById('alamat').Value; 
+  const no = document.getElementById('no').value;
+  const namalengkap = document.getElementById('namalengkap').value;
+  const jeniskelamin = document.getElementById('jeniskelamin').value;
+  const tanggallahir = document.getElementById('tanggallahir').value;
+  const agama = document.getElementById('agama').value;
+  const notelpon = document.getElementById('notelpon').value;
+  const hobi = document.getElementById('hobi').value
+  const citacita = document.getElementById('citacita').value;
+  const alamat = document.getElementById('alamat').value; 
   
   
   
   //tambahkan data ke firestore
   await addDoc(siswaCollection, {
     no: no,
-    namalengkap : namalengkap,
+    namalengkap: namalengkap,
     jeniskelamin: jeniskelamin,
     tanggallahir: tanggallahir,
     agama: agama,
